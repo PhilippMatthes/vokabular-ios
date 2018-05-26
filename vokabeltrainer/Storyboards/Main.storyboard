@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Exercise Controller-->
+        <scene sceneID="61h-gf-tBY">
+            <objects>
+                <viewController storyboardIdentifier="ExerciseController" id="EP0-9Y-WmN" customClass="ExerciseController" customModule="vokabeltrainer" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lrh-tV-hTd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUC-5i-4Ai" customClass="RaisedButton" customModule="Material">
+                                <rect key="frame" x="10" y="30" width="355" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="IPj-IM-4gn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pf8-Rb-65T" customClass="RaisedButton" customModule="Material">
+                                <rect key="frame" x="10" y="240" width="355" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ds1-ql-lKw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9h-H5-mLk" customClass="RaisedButton" customModule="Material">
+                                <rect key="frame" x="10" y="300" width="355" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="t0E-xl-n2Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyn-4p-6pW" customClass="RaisedButton" customModule="Material">
+                                <rect key="frame" x="10" y="360" width="355" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qKa-gb-yCu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3l-Aw-ODb">
+                                <rect key="frame" x="10" y="160" width="355" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Xdz-fv-f81"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLC-Fz-2Xr" customClass="RaisedButton" customModule="Material">
+                                <rect key="frame" x="10" y="420" width="355" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wtS-ic-RvR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2ah-lQ-dUX" firstAttribute="trailing" secondItem="WUC-5i-4Ai" secondAttribute="trailing" constant="10" id="8MG-gF-LAi"/>
+                            <constraint firstItem="2ah-lQ-dUX" firstAttribute="trailing" secondItem="Kyn-4p-6pW" secondAttribute="trailing" constant="10" id="D9t-R0-OB9"/>
+                            <constraint firstItem="Kyn-4p-6pW" firstAttribute="top" secondItem="r9h-H5-mLk" secondAttribute="bottom" constant="10" id="EQz-7T-gqa"/>
+                            <constraint firstItem="WUC-5i-4Ai" firstAttribute="centerX" secondItem="Lrh-tV-hTd" secondAttribute="centerX" id="Etn-em-OoA"/>
+                            <constraint firstItem="Pf8-Rb-65T" firstAttribute="top" secondItem="t3l-Aw-ODb" secondAttribute="bottom" constant="40" id="OSK-qg-Jwh"/>
+                            <constraint firstItem="Kyn-4p-6pW" firstAttribute="leading" secondItem="2ah-lQ-dUX" secondAttribute="leading" constant="10" id="Q6Q-E3-Npe"/>
+                            <constraint firstItem="kLC-Fz-2Xr" firstAttribute="top" secondItem="Kyn-4p-6pW" secondAttribute="bottom" constant="10" id="Tgw-Qs-sJH"/>
+                            <constraint firstItem="2ah-lQ-dUX" firstAttribute="trailing" secondItem="t3l-Aw-ODb" secondAttribute="trailing" constant="10" id="YC8-Zr-gow"/>
+                            <constraint firstItem="t3l-Aw-ODb" firstAttribute="leading" secondItem="2ah-lQ-dUX" secondAttribute="leading" constant="10" id="YuA-Ub-3aq"/>
+                            <constraint firstItem="WUC-5i-4Ai" firstAttribute="top" secondItem="2ah-lQ-dUX" secondAttribute="top" constant="10" id="Zbc-r1-Jwj"/>
+                            <constraint firstItem="2ah-lQ-dUX" firstAttribute="trailing" secondItem="r9h-H5-mLk" secondAttribute="trailing" constant="10" id="dl8-H0-H1X"/>
+                            <constraint firstItem="Pf8-Rb-65T" firstAttribute="leading" secondItem="2ah-lQ-dUX" secondAttribute="leading" constant="10" id="egB-PV-TOM"/>
+                            <constraint firstItem="2ah-lQ-dUX" firstAttribute="trailing" secondItem="Pf8-Rb-65T" secondAttribute="trailing" constant="10" id="f0R-o3-6fd"/>
+                            <constraint firstItem="r9h-H5-mLk" firstAttribute="top" secondItem="Pf8-Rb-65T" secondAttribute="bottom" constant="10" id="i2b-P3-ruZ"/>
+                            <constraint firstItem="2ah-lQ-dUX" firstAttribute="trailing" secondItem="kLC-Fz-2Xr" secondAttribute="trailing" constant="10" id="iIt-k7-00M"/>
+                            <constraint firstItem="WUC-5i-4Ai" firstAttribute="leading" secondItem="2ah-lQ-dUX" secondAttribute="leading" constant="10" id="mbX-wj-rmc"/>
+                            <constraint firstItem="kLC-Fz-2Xr" firstAttribute="leading" secondItem="2ah-lQ-dUX" secondAttribute="leading" constant="10" id="qv0-x5-M2Y"/>
+                            <constraint firstItem="r9h-H5-mLk" firstAttribute="leading" secondItem="2ah-lQ-dUX" secondAttribute="leading" constant="10" id="viA-v4-0FU"/>
+                            <constraint firstItem="t3l-Aw-ODb" firstAttribute="top" secondItem="WUC-5i-4Ai" secondAttribute="bottom" constant="30" id="z6Y-S5-NEp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2ah-lQ-dUX"/>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="Pf8-Rb-65T" id="Uxa-Zr-gCp"/>
+                        <outlet property="button2" destination="r9h-H5-mLk" id="NY8-Fz-mP3"/>
+                        <outlet property="button3" destination="Kyn-4p-6pW" id="9mr-eQ-fcl"/>
+                        <outlet property="button4" destination="kLC-Fz-2Xr" id="8JY-Kf-mgY"/>
+                        <outlet property="label" destination="t3l-Aw-ODb" id="bwE-el-QG3"/>
+                        <outlet property="titleButton" destination="WUC-5i-4Ai" id="sKK-OM-g29"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TTV-s2-Yef" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="143"/>
+        </scene>
+    </scenes>
+</document>
