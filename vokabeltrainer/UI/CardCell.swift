@@ -13,8 +13,10 @@ import UIKit
 
 class CardCell: CardCollectionViewCell {
     
-    static let identifier = "CardCell"
-    static let height: CGFloat = 200
+    static let height: CGFloat = 250
+    
+    static let fullHeartColor: UIColor = Color.red.base
+    static let emptyHeartColor: UIColor = Color.grey.base
     
     var toolbar: Toolbar!
     var moreButton: IconButton!
@@ -31,25 +33,6 @@ class CardCell: CardCollectionViewCell {
         prepareContentView()
         prepareBottomBar()
         prepareCard()
-    }
-    
-    func prepare(forExercise exercise: Exercise) {
-        prep()
-        let amount = exercise.load().count
-        lowerLabel.text = amount == 1 ? "1 Begriff" : "\(amount) Begriffe"
-        lowerLabel.textAlignment = .right
-        toolbar.title = exercise.name
-        toolbar.detail = "Wortschatz"
-        contentLabel.text = exercise.description
-    }
-    
-    func prepare(forLanguage language: Language) {
-        prep()
-        lowerLabel.text = language.exercises.count == 1 ? "1 Übung" : "\(language.exercises.count) Übungen"
-        lowerLabel.textAlignment = .right
-        toolbar.title = language.name
-        toolbar.detail = "Interaktive Übungen"
-        contentLabel.text = language.description
     }
     
     func prepareColor() {
@@ -69,25 +52,33 @@ class CardCell: CardCollectionViewCell {
     }
     
     func prepareButtons() {
-        favoriteButton = IconButton(image: Icon.favorite, tintColor: Color.red.base)
-        moreButton = IconButton(image: Icon.cm.moreVertical, tintColor: Color.grey.base)
+        favoriteButton = IconButton(image: Icon.favorite, tintColor: CardCell.emptyHeartColor)
+        favoriteButton.add(for: .touchUpInside) {
+            self.favoriteButtonClicked()
+        }
+        
+        moreButton = IconButton(image: Icon.cm.moreVertical, tintColor: Color.white)
+        moreButton.add(for: .touchUpInside) {
+            self.moreButtonClicked()
+        }
     }
     
     func prepareToolBar() {
         toolbar = Toolbar(rightViews: [moreButton])
         toolbar.title = "Toolbar Title"
+        toolbar.titleLabel.textColor = Color.white
         toolbar.titleLabel.textAlignment = .left
         toolbar.detail = "Toolbar Detail"
         toolbar.detailLabel.textAlignment = .left
-        toolbar.detailLabel.textColor = Color.grey.base
+        toolbar.detailLabel.textColor = Color.white
+        toolbar.layer.cornerRadius = 2.0
     }
     
     func prepareContentView() {
         contentLabel = UILabel()
-        contentLabel.numberOfLines = 420
+        contentLabel.numberOfLines = 0
         contentLabel.text = "Content Label Text"
         contentLabel.font = RobotoFont.regular(with: 14)
-        contentLabel.backgroundColor = Color.grey.lighten5
     }
     
     func prepareBottomBar() {
@@ -101,21 +92,26 @@ class CardCell: CardCollectionViewCell {
         
         card!.toolbar = toolbar
         card!.toolbarEdgeInsetsPreset = .square3
-        card!.toolbarEdgeInsets.bottom = 0
-        card!.toolbarEdgeInsets.right = 8
         
         card!.contentView = contentLabel
-        card!.contentViewEdgeInsetsPreset = .wideRectangle3
+        card!.contentViewEdgeInsetsPreset = .wideRectangle4
         
         card!.bottomBar = bottomBar
         card!.bottomBarEdgeInsetsPreset = .wideRectangle2
         
-        contentView.layout(card!).horizontally(left: 10, right: 10).center()
+        card!.frame = CGRect(center: bounds.center, size: CGSize(width: bounds.size.width - 20, height: CardCell.height))
         
-        guard let recognizers = gestureRecognizers else {return}
-        for recognizer in recognizers {
-            recognizer.cancelsTouchesInView = false
-        }
+        card!.backgroundColor = Color.white.withAlphaComponent(0.2)
+        card!.animate(toBackgroundColor: Color.white, withDuration: 1.0)
+        card!.bottomBar!.backgroundColor = .clear
+    }
+    
+    func favoriteButtonClicked() {
+        favoriteButton.tintColor = favoriteButton.tintColor == CardCell.fullHeartColor ? CardCell.emptyHeartColor : CardCell.fullHeartColor
+    }
+    
+    func moreButtonClicked() {
+        
     }
     
 }

@@ -78,4 +78,15 @@ extension UIView {
         animation.duration = duration
         layer.add(animation, forKey: type)
     }
+    
+    func animateBorder(toColor color: UIColor, duration: CFTimeInterval = 0.1, widthFrom: CGFloat = 0, widthTo: CGFloat = 3) {
+        let borderWidth:CABasicAnimation = CABasicAnimation(keyPath: "borderWidth")
+        borderWidth.fromValue = widthFrom
+        borderWidth.toValue = widthTo
+        borderWidth.duration = duration
+        layer.borderWidth = widthFrom
+        layer.borderColor = color.cgColor
+        layer.add(borderWidth, forKey: "Width")
+        layer.borderWidth = widthTo
+    }
 }

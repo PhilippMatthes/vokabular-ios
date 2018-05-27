@@ -10,39 +10,29 @@ import Foundation
 import UIKit
 import Material
 
-class LanguageController: HiddenCollectionViewController {
+class LanguageController: CardCellBaseCollectionViewController {
     
     var selectedLanguage: Language!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        collectionView.register(CardCell.classForCoder(), forCellWithReuseIdentifier: CardCell.identifier)
-        
-        view.backgroundColor = Config.bgcolor
-        
-        prepareNavigationBar()
+        super.viewDidLoad()        
+        prepareNavigationBar(title: selectedLanguage.name)
+        collectionView.register(ExerciseCardCell.classForCoder(), forCellWithReuseIdentifier: ExerciseCardCell.identifier)
     }
     
-    func prepareNavigationBar() {
-        navigationItem.titleLabel.text = selectedLanguage.name
-    }
     
 }
 
-extension LanguageController: UICollectionViewDelegateFlowLayout {
+extension LanguageController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return selectedLanguage.exercises.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCell.identifier, for: indexPath) as? CardCell else {return UICollectionViewCell()}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ExerciseCardCell.identifier, for: indexPath) as? ExerciseCardCell else {return UICollectionViewCell()}
         cell.prepare(forExercise: selectedLanguage.exercises[indexPath.row])
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Screen.width, height: CardCell.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

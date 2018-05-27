@@ -11,45 +11,33 @@ import SwiftRater
 import Material
 import Motion
 
-class LanguageSelectionController: HiddenCollectionViewController {
+class LanguageSelectionController: CardCellBaseCollectionViewController {
     
     let languageController = LanguageController()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        collectionView.register(CardCell.classForCoder(), forCellWithReuseIdentifier: CardCell.identifier)
-        
-        view.backgroundColor = Config.bgcolor
-        
-        prepareNavigationBar()
-        
+        super.viewDidLoad()        
+        prepareNavigationBar(title: "Vokabular")
         SwiftRater.check()
-    }
-    
-    func prepareNavigationBar() {
-        navigationItem.titleLabel.text = "Vokabular"
+        collectionView.register(LanguageCardCell.classForCoder(), forCellWithReuseIdentifier: LanguageCardCell.identifier)
     }
 
 }
 
-extension LanguageSelectionController: UICollectionViewDelegateFlowLayout {
+extension LanguageSelectionController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCell.identifier, for: indexPath) as? CardCell else {return UICollectionViewCell()}
-        cell.prepare(forLanguage: Language.all[indexPath.row])
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LanguageCardCell.identifier, for: indexPath) as? LanguageCardCell else {return UICollectionViewCell()}
+        cell.prepare(forLanguage: Languages.all[indexPath.row])
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Language.all.count
+        return Languages.all.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        languageController.selectedLanguage = Language.all[indexPath.row]
+        languageController.selectedLanguage = Languages.all[indexPath.row]
         navigationController?.pushViewController(languageController, animated: true)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Screen.width, height: CardCell.height)
     }
     
 }
