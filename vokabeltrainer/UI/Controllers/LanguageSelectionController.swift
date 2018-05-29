@@ -27,16 +27,16 @@ class LanguageSelectionController: CardCellBaseCollectionViewController {
 extension LanguageSelectionController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LanguageCardCell.identifier, for: indexPath) as? LanguageCardCell else {return UICollectionViewCell()}
-        cell.prepare(forLanguage: Languages.all[indexPath.row])
+        cell.prepare(forLanguage: Database.main.languages[indexPath.row])
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Languages.all.count
+        return Database.main.languages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        languageController.selectedLanguage = Languages.all[indexPath.row]
+        languageController.selectedLanguage = Database.main.languages[indexPath.row]
         navigationController?.pushViewController(languageController, animated: true)
     }
     

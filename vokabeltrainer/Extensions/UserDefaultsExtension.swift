@@ -29,7 +29,6 @@ import Foundation
 extension UserDefaults {
 
     static func loadObject<T>(ofType type: T, withIdentifier identifier: String) -> T? {
-//        State.shared.defaults.synchronize()
         if let decoded = UserDefaults.standard.object(forKey: identifier) as? NSData {
             if let object = NSKeyedUnarchiver.unarchiveObject(with: decoded as Data) as? T {
                 return object
@@ -41,7 +40,6 @@ extension UserDefaults {
     static func save<T>(object: T, withIdentifier identifier: String) {
         let encodedData = NSKeyedArchiver.archivedData(withRootObject: object)
         UserDefaults.standard.set(encodedData, forKey: identifier)
-//        State.shared.defaults.synchronize()
     }
     
     static func loadAndExtendList<T>(withObject object: T, andIdentifier identifier: String) {

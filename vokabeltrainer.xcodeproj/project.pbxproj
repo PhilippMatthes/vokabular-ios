@@ -7,21 +7,148 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18DFA3734D1161FA94D6209F /* Pods_vokabeltrainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA65A1A400A9655A8327975 /* Pods_vokabeltrainer.framework */; };
+		BE48B1AE20BABCEE00849ABB /* ExerciseCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE48B1AD20BABCEE00849ABB /* ExerciseCardCell.swift */; };
+		BE48B1B020BABD6300849ABB /* LanguageCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE48B1AF20BABD6300849ABB /* LanguageCardCell.swift */; };
+		BE48B1B420BAD49400849ABB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE48B1B320BAD49400849ABB /* Colors.swift */; };
 		BE83093920B9876800D0BDB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE83093820B9876800D0BDB6 /* AppDelegate.swift */; };
-		BE83093B20B9876900D0BDB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE83093A20B9876800D0BDB6 /* ViewController.swift */; };
-		BE83093E20B9876900D0BDB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE83093C20B9876900D0BDB6 /* Main.storyboard */; };
+		BE83093B20B9876900D0BDB6 /* LanguageSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE83093A20B9876800D0BDB6 /* LanguageSelectionController.swift */; };
 		BE83094020B9876A00D0BDB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE83093F20B9876A00D0BDB6 /* Assets.xcassets */; };
 		BE83094320B9876A00D0BDB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE83094120B9876A00D0BDB6 /* LaunchScreen.storyboard */; };
+		BE9BD5A120BD84BD00BCD6B9 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9BD5A020BD84BD00BCD6B9 /* Word.swift */; };
+		BE9BD5A620BD8DA600BCD6B9 /* languages.csv in Resources */ = {isa = PBXBuildFile; fileRef = BE9BD5A520BD8DA600BCD6B9 /* languages.csv */; };
+		BE9BD5A820BD8DB900BCD6B9 /* exercises.csv in Resources */ = {isa = PBXBuildFile; fileRef = BE9BD5A720BD8DB900BCD6B9 /* exercises.csv */; };
+		BEDB998920B98EB700A6F91B /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB997220B98EB300A6F91B /* OptionalExtension.swift */; };
+		BEDB998A20B98EB700A6F91B /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB997320B98EB300A6F91B /* CGSizeExtension.swift */; };
+		BEDB998B20B98EB700A6F91B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB997420B98EB400A6F91B /* DateExtension.swift */; };
+		BEDB998C20B98EB700A6F91B /* SFSafariViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB997520B98EB400A6F91B /* SFSafariViewControllerExtension.swift */; };
+		BEDB998D20B98EB700A6F91B /* BadgeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB997620B98EB400A6F91B /* BadgeExtension.swift */; };
+		BEDB998E20B98EB700A6F91B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB997720B98EB400A6F91B /* UIColorExtension.swift */; };
+		BEDB998F20B98EB700A6F91B /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB997820B98EB400A6F91B /* URLExtension.swift */; };
+		BEDB999020B98EB700A6F91B /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB997920B98EB400A6F91B /* UIFontExtension.swift */; };
+		BEDB999120B98EB700A6F91B /* UINaviationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB997A20B98EB500A6F91B /* UINaviationBarExtension.swift */; };
+		BEDB999220B98EB700A6F91B /* UITabBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB997B20B98EB500A6F91B /* UITabBarExtension.swift */; };
+		BEDB999320B98EB700A6F91B /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB997C20B98EB500A6F91B /* UserDefaultsExtension.swift */; };
+		BEDB999420B98EB700A6F91B /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB997D20B98EB500A6F91B /* IntExtension.swift */; };
+		BEDB999520B98EB700A6F91B /* UIControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB997E20B98EB500A6F91B /* UIControlExtension.swift */; };
+		BEDB999620B98EB700A6F91B /* MKCoordinateRegionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB997F20B98EB600A6F91B /* MKCoordinateRegionExtension.swift */; };
+		BEDB999720B98EB700A6F91B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB998020B98EB600A6F91B /* UIImageExtension.swift */; };
+		BEDB999820B98EB700A6F91B /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB998120B98EB600A6F91B /* ArrayExtension.swift */; };
+		BEDB999920B98EB700A6F91B /* EquatableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB998220B98EB600A6F91B /* EquatableExtension.swift */; };
+		BEDB999A20B98EB700A6F91B /* CLLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB998320B98EB600A6F91B /* CLLocationExtension.swift */; };
+		BEDB999B20B98EB700A6F91B /* SwiftRaterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB998420B98EB600A6F91B /* SwiftRaterExtension.swift */; };
+		BEDB999C20B98EB700A6F91B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB998520B98EB700A6F91B /* UIViewControllerExtension.swift */; };
+		BEDB999D20B98EB700A6F91B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB998620B98EB700A6F91B /* UIViewExtension.swift */; };
+		BEDB999E20B98EB700A6F91B /* RefreshControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB998720B98EB700A6F91B /* RefreshControlExtension.swift */; };
+		BEDB999F20B98EB700A6F91B /* MapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB998820B98EB700A6F91B /* MapViewExtension.swift */; };
+		BEDB99A220B98ECC00A6F91B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB99A020B98ECC00A6F91B /* Config.swift */; };
+		BEDB99A320B98ECC00A6F91B /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB99A120B98ECC00A6F91B /* Database.swift */; };
+		BEDB99A520B98EDD00A6F91B /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99A420B98EDD00A6F91B /* Fonts */; };
+		BEDB99A720B98EF300A6F91B /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB99A620B98EF300A6F91B /* Tools.swift */; };
+		BEDB99A920B9901300A6F91B /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB99A820B9901300A6F91B /* CardCell.swift */; };
+		BEDB99AF20B99A0600A6F91B /* german-spanish-base.csv in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99AD20B9925100A6F91B /* german-spanish-base.csv */; };
+		BEDB99B120B99A4500A6F91B /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB99B020B99A4500A6F91B /* FileManagerExtension.swift */; };
+		BEDB99B320B99D0400A6F91B /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB99B220B99D0400A6F91B /* Language.swift */; };
+		BEDB99B620B9AB3900A6F91B /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB99B520B9AB3900A6F91B /* NavController.swift */; };
+		BEDB99B820B9B05F00A6F91B /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDB99B720B9B05F00A6F91B /* Material.framework */; };
+		BEDB99BA20B9B05F00A6F91B /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDB99B920B9B05F00A6F91B /* Motion.framework */; };
+		BEDB99BC20B9B05F00A6F91B /* SwiftRater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEDB99BB20B9B05F00A6F91B /* SwiftRater.framework */; };
+		BEDB99BE20B9B6B400A6F91B /* LanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB99BD20B9B6B400A6F91B /* LanguageController.swift */; };
+		BEDB99C020B9B88000A6F91B /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB99BF20B9B88000A6F91B /* Exercise.swift */; };
+		BEDB99C220B9BE8400A6F91B /* CardCellBaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB99C120B9BE8400A6F91B /* CardCellBaseCollectionViewController.swift */; };
+		BEDB99C420B9C00100A6F91B /* ExerciseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB99C320B9C00100A6F91B /* ExerciseController.swift */; };
+		BEDB99CC20B9C5D400A6F91B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99CB20B9C5D400A6F91B /* Main.storyboard */; };
+		BEDB99CE20B9DE6500A6F91B /* german-spanish-colors.csv in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99CD20B9DE6500A6F91B /* german-spanish-colors.csv */; };
+		BEDB99D020B9DE8D00A6F91B /* german-spanish-numbers.csv in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99CF20B9DE8D00A6F91B /* german-spanish-numbers.csv */; };
+		BEDB99D220B9DEAC00A6F91B /* german-spanish-weekdays.csv in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99D120B9DEAC00A6F91B /* german-spanish-weekdays.csv */; };
+		BEDB99D420B9DED400A6F91B /* german-spanish-months.csv in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99D320B9DED400A6F91B /* german-spanish-months.csv */; };
+		BEDB99D620B9DF2700A6F91B /* german-spanish-verbs.csv in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99D520B9DF2700A6F91B /* german-spanish-verbs.csv */; };
+		BEDB99D820B9DF4A00A6F91B /* german-spanish-adjectives.csv in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99D720B9DF4A00A6F91B /* german-spanish-adjectives.csv */; };
+		BEDB99DA20B9DF9A00A6F91B /* german-spanish-economic.csv in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99D920B9DF9A00A6F91B /* german-spanish-economic.csv */; };
+		BEDB99DC20B9DFB800A6F91B /* german-spanish-paths.csv in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99DB20B9DFB800A6F91B /* german-spanish-paths.csv */; };
+		BEDB99DE20B9DFD600A6F91B /* german-spanish-environment.csv in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99DD20B9DFD600A6F91B /* german-spanish-environment.csv */; };
+		BEDB99E020B9DFF100A6F91B /* german-spanish-animals.csv in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99DF20B9DFF100A6F91B /* german-spanish-animals.csv */; };
+		BEDB99E220B9E01200A6F91B /* german-spanish-grocery.csv in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99E120B9E01200A6F91B /* german-spanish-grocery.csv */; };
+		BEDB99E420B9E03400A6F91B /* german-spanish-body.csv in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99E320B9E03400A6F91B /* german-spanish-body.csv */; };
+		BEDB99E620B9E05B00A6F91B /* german-spanish-clothing.csv in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99E520B9E05B00A6F91B /* german-spanish-clothing.csv */; };
+		BEDB99E820B9E07C00A6F91B /* german-spanish-countries.csv in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99E720B9E07C00A6F91B /* german-spanish-countries.csv */; };
+		BEDB99EA20B9E09200A6F91B /* german-spanish-fruits.csv in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99E920B9E09200A6F91B /* german-spanish-fruits.csv */; };
+		BEDB99EC20B9E0C000A6F91B /* german-spanish-jobs.csv in Resources */ = {isa = PBXBuildFile; fileRef = BEDB99EB20B9E0C000A6F91B /* german-spanish-jobs.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		892C3E880DAF4B4DCE4C6D3F /* Pods-vokabeltrainer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vokabeltrainer.release.xcconfig"; path = "Pods/Target Support Files/Pods-vokabeltrainer/Pods-vokabeltrainer.release.xcconfig"; sourceTree = "<group>"; };
+		9DF6912FCC48247307819222 /* Pods-vokabeltrainer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vokabeltrainer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vokabeltrainer/Pods-vokabeltrainer.debug.xcconfig"; sourceTree = "<group>"; };
+		BE48B1AD20BABCEE00849ABB /* ExerciseCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCardCell.swift; sourceTree = "<group>"; };
+		BE48B1AF20BABD6300849ABB /* LanguageCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCardCell.swift; sourceTree = "<group>"; };
+		BE48B1B320BAD49400849ABB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BE83093520B9876800D0BDB6 /* vokabeltrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vokabeltrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE83093820B9876800D0BDB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE83093A20B9876800D0BDB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BE83093D20B9876900D0BDB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE83093A20B9876800D0BDB6 /* LanguageSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionController.swift; sourceTree = "<group>"; };
 		BE83093F20B9876A00D0BDB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE83094220B9876A00D0BDB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE83094420B9876A00D0BDB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE83094C20B98C8900D0BDB6 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		BE9BD5A020BD84BD00BCD6B9 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		BE9BD5A520BD8DA600BCD6B9 /* languages.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = languages.csv; sourceTree = "<group>"; };
+		BE9BD5A720BD8DB900BCD6B9 /* exercises.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = exercises.csv; sourceTree = "<group>"; };
+		BEDB997220B98EB300A6F91B /* OptionalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
+		BEDB997320B98EB300A6F91B /* CGSizeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
+		BEDB997420B98EB400A6F91B /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		BEDB997520B98EB400A6F91B /* SFSafariViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSafariViewControllerExtension.swift; sourceTree = "<group>"; };
+		BEDB997620B98EB400A6F91B /* BadgeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeExtension.swift; sourceTree = "<group>"; };
+		BEDB997720B98EB400A6F91B /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		BEDB997820B98EB400A6F91B /* URLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		BEDB997920B98EB400A6F91B /* UIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		BEDB997A20B98EB500A6F91B /* UINaviationBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINaviationBarExtension.swift; sourceTree = "<group>"; };
+		BEDB997B20B98EB500A6F91B /* UITabBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITabBarExtension.swift; sourceTree = "<group>"; };
+		BEDB997C20B98EB500A6F91B /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		BEDB997D20B98EB500A6F91B /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		BEDB997E20B98EB500A6F91B /* UIControlExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlExtension.swift; sourceTree = "<group>"; };
+		BEDB997F20B98EB600A6F91B /* MKCoordinateRegionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionExtension.swift; sourceTree = "<group>"; };
+		BEDB998020B98EB600A6F91B /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		BEDB998120B98EB600A6F91B /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		BEDB998220B98EB600A6F91B /* EquatableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquatableExtension.swift; sourceTree = "<group>"; };
+		BEDB998320B98EB600A6F91B /* CLLocationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationExtension.swift; sourceTree = "<group>"; };
+		BEDB998420B98EB600A6F91B /* SwiftRaterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRaterExtension.swift; sourceTree = "<group>"; };
+		BEDB998520B98EB700A6F91B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		BEDB998620B98EB700A6F91B /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		BEDB998720B98EB700A6F91B /* RefreshControlExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshControlExtension.swift; sourceTree = "<group>"; };
+		BEDB998820B98EB700A6F91B /* MapViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewExtension.swift; sourceTree = "<group>"; };
+		BEDB99A020B98ECC00A6F91B /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		BEDB99A120B98ECC00A6F91B /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		BEDB99A420B98EDD00A6F91B /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		BEDB99A620B98EF300A6F91B /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		BEDB99A820B9901300A6F91B /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		BEDB99AD20B9925100A6F91B /* german-spanish-base.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = "german-spanish-base.csv"; path = "vokabeltrainer/Languages/Spanish/german-spanish-base.csv"; sourceTree = SOURCE_ROOT; };
+		BEDB99B020B99A4500A6F91B /* FileManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtension.swift; sourceTree = "<group>"; };
+		BEDB99B220B99D0400A6F91B /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		BEDB99B520B9AB3900A6F91B /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
+		BEDB99B720B9B05F00A6F91B /* Material.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Material.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEDB99B920B9B05F00A6F91B /* Motion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Motion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEDB99BB20B9B05F00A6F91B /* SwiftRater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftRater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEDB99BD20B9B6B400A6F91B /* LanguageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageController.swift; sourceTree = "<group>"; };
+		BEDB99BF20B9B88000A6F91B /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		BEDB99C120B9BE8400A6F91B /* CardCellBaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellBaseCollectionViewController.swift; sourceTree = "<group>"; };
+		BEDB99C320B9C00100A6F91B /* ExerciseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseController.swift; sourceTree = "<group>"; };
+		BEDB99CB20B9C5D400A6F91B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BEDB99CD20B9DE6500A6F91B /* german-spanish-colors.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "german-spanish-colors.csv"; sourceTree = "<group>"; };
+		BEDB99CF20B9DE8D00A6F91B /* german-spanish-numbers.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "german-spanish-numbers.csv"; sourceTree = "<group>"; };
+		BEDB99D120B9DEAC00A6F91B /* german-spanish-weekdays.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "german-spanish-weekdays.csv"; sourceTree = "<group>"; };
+		BEDB99D320B9DED400A6F91B /* german-spanish-months.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "german-spanish-months.csv"; sourceTree = "<group>"; };
+		BEDB99D520B9DF2700A6F91B /* german-spanish-verbs.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "german-spanish-verbs.csv"; sourceTree = "<group>"; };
+		BEDB99D720B9DF4A00A6F91B /* german-spanish-adjectives.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "german-spanish-adjectives.csv"; sourceTree = "<group>"; };
+		BEDB99D920B9DF9A00A6F91B /* german-spanish-economic.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "german-spanish-economic.csv"; sourceTree = "<group>"; };
+		BEDB99DB20B9DFB800A6F91B /* german-spanish-paths.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "german-spanish-paths.csv"; sourceTree = "<group>"; };
+		BEDB99DD20B9DFD600A6F91B /* german-spanish-environment.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "german-spanish-environment.csv"; sourceTree = "<group>"; };
+		BEDB99DF20B9DFF100A6F91B /* german-spanish-animals.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "german-spanish-animals.csv"; sourceTree = "<group>"; };
+		BEDB99E120B9E01200A6F91B /* german-spanish-grocery.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "german-spanish-grocery.csv"; sourceTree = "<group>"; };
+		BEDB99E320B9E03400A6F91B /* german-spanish-body.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "german-spanish-body.csv"; sourceTree = "<group>"; };
+		BEDB99E520B9E05B00A6F91B /* german-spanish-clothing.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "german-spanish-clothing.csv"; sourceTree = "<group>"; };
+		BEDB99E720B9E07C00A6F91B /* german-spanish-countries.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "german-spanish-countries.csv"; sourceTree = "<group>"; };
+		BEDB99E920B9E09200A6F91B /* german-spanish-fruits.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "german-spanish-fruits.csv"; sourceTree = "<group>"; };
+		BEDB99EB20B9E0C000A6F91B /* german-spanish-jobs.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = "german-spanish-jobs.csv"; sourceTree = "<group>"; };
+		DEA65A1A400A9655A8327975 /* Pods_vokabeltrainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vokabeltrainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +156,51 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDB99B820B9B05F00A6F91B /* Material.framework in Frameworks */,
+				BEDB99BA20B9B05F00A6F91B /* Motion.framework in Frameworks */,
+				BEDB99BC20B9B05F00A6F91B /* SwiftRater.framework in Frameworks */,
+				18DFA3734D1161FA94D6209F /* Pods_vokabeltrainer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F1B9BBFB82C8DC31A650EF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEDB99B720B9B05F00A6F91B /* Material.framework */,
+				BEDB99B920B9B05F00A6F91B /* Motion.framework */,
+				BEDB99BB20B9B05F00A6F91B /* SwiftRater.framework */,
+				DEA65A1A400A9655A8327975 /* Pods_vokabeltrainer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77354C627F641B1E3697B0C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DF6912FCC48247307819222 /* Pods-vokabeltrainer.debug.xcconfig */,
+				892C3E880DAF4B4DCE4C6D3F /* Pods-vokabeltrainer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BE48B1AC20BABB4C00849ABB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BEDB99C120B9BE8400A6F91B /* CardCellBaseCollectionViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		BE83092C20B9876800D0BDB6 = {
 			isa = PBXGroup;
 			children = (
 				BE83093720B9876800D0BDB6 /* vokabeltrainer */,
 				BE83093620B9876800D0BDB6 /* Products */,
+				77354C627F641B1E3697B0C5 /* Pods */,
+				4F1B9BBFB82C8DC31A650EF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +215,128 @@
 		BE83093720B9876800D0BDB6 /* vokabeltrainer */ = {
 			isa = PBXGroup;
 			children = (
-				BE83093820B9876800D0BDB6 /* AppDelegate.swift */,
-				BE83093A20B9876800D0BDB6 /* ViewController.swift */,
-				BE83093C20B9876900D0BDB6 /* Main.storyboard */,
+				BEDB99A020B98ECC00A6F91B /* Config.swift */,
+				BEDB99A120B98ECC00A6F91B /* Database.swift */,
+				BE48B1B320BAD49400849ABB /* Colors.swift */,
+				BEDB99A620B98EF300A6F91B /* Tools.swift */,
+				BEDB99B420B99D1000A6F91B /* Models */,
+				BEDB997120B98E9400A6F91B /* UI */,
+				BEDB997020B98E8800A6F91B /* Extensions */,
+				BEDB99AA20B9920100A6F91B /* Languages */,
+				BEDB99A420B98EDD00A6F91B /* Fonts */,
+				BEDB99C820B9C03800A6F91B /* Storyboards */,
 				BE83093F20B9876A00D0BDB6 /* Assets.xcassets */,
-				BE83094120B9876A00D0BDB6 /* LaunchScreen.storyboard */,
 				BE83094420B9876A00D0BDB6 /* Info.plist */,
 			);
 			path = vokabeltrainer;
+			sourceTree = "<group>";
+		};
+		BEDB997020B98E8800A6F91B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BEDB998120B98EB600A6F91B /* ArrayExtension.swift */,
+				BEDB997620B98EB400A6F91B /* BadgeExtension.swift */,
+				BEDB997320B98EB300A6F91B /* CGSizeExtension.swift */,
+				BEDB998320B98EB600A6F91B /* CLLocationExtension.swift */,
+				BEDB997420B98EB400A6F91B /* DateExtension.swift */,
+				BEDB998220B98EB600A6F91B /* EquatableExtension.swift */,
+				BEDB997D20B98EB500A6F91B /* IntExtension.swift */,
+				BEDB998820B98EB700A6F91B /* MapViewExtension.swift */,
+				BEDB997F20B98EB600A6F91B /* MKCoordinateRegionExtension.swift */,
+				BEDB997220B98EB300A6F91B /* OptionalExtension.swift */,
+				BEDB998720B98EB700A6F91B /* RefreshControlExtension.swift */,
+				BEDB997520B98EB400A6F91B /* SFSafariViewControllerExtension.swift */,
+				BEDB998420B98EB600A6F91B /* SwiftRaterExtension.swift */,
+				BEDB997720B98EB400A6F91B /* UIColorExtension.swift */,
+				BEDB997E20B98EB500A6F91B /* UIControlExtension.swift */,
+				BEDB997920B98EB400A6F91B /* UIFontExtension.swift */,
+				BEDB998020B98EB600A6F91B /* UIImageExtension.swift */,
+				BEDB997A20B98EB500A6F91B /* UINaviationBarExtension.swift */,
+				BEDB997B20B98EB500A6F91B /* UITabBarExtension.swift */,
+				BEDB998520B98EB700A6F91B /* UIViewControllerExtension.swift */,
+				BEDB998620B98EB700A6F91B /* UIViewExtension.swift */,
+				BEDB997820B98EB400A6F91B /* URLExtension.swift */,
+				BEDB997C20B98EB500A6F91B /* UserDefaultsExtension.swift */,
+				BEDB99B020B99A4500A6F91B /* FileManagerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BEDB997120B98E9400A6F91B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BEDB99AC20B9920E00A6F91B /* Controllers */,
+				BEDB99A820B9901300A6F91B /* CardCell.swift */,
+				BE48B1AD20BABCEE00849ABB /* ExerciseCardCell.swift */,
+				BE48B1AF20BABD6300849ABB /* LanguageCardCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		BEDB99AA20B9920100A6F91B /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				BE9BD5A520BD8DA600BCD6B9 /* languages.csv */,
+				BE9BD5A720BD8DB900BCD6B9 /* exercises.csv */,
+				BEDB99AB20B9920100A6F91B /* Spanish */,
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
+		BEDB99AB20B9920100A6F91B /* Spanish */ = {
+			isa = PBXGroup;
+			children = (
+				BEDB99AD20B9925100A6F91B /* german-spanish-base.csv */,
+				BEDB99CD20B9DE6500A6F91B /* german-spanish-colors.csv */,
+				BEDB99CF20B9DE8D00A6F91B /* german-spanish-numbers.csv */,
+				BEDB99D120B9DEAC00A6F91B /* german-spanish-weekdays.csv */,
+				BEDB99D320B9DED400A6F91B /* german-spanish-months.csv */,
+				BEDB99D520B9DF2700A6F91B /* german-spanish-verbs.csv */,
+				BEDB99D720B9DF4A00A6F91B /* german-spanish-adjectives.csv */,
+				BEDB99D920B9DF9A00A6F91B /* german-spanish-economic.csv */,
+				BEDB99DB20B9DFB800A6F91B /* german-spanish-paths.csv */,
+				BEDB99DD20B9DFD600A6F91B /* german-spanish-environment.csv */,
+				BEDB99DF20B9DFF100A6F91B /* german-spanish-animals.csv */,
+				BEDB99E120B9E01200A6F91B /* german-spanish-grocery.csv */,
+				BEDB99E320B9E03400A6F91B /* german-spanish-body.csv */,
+				BEDB99E520B9E05B00A6F91B /* german-spanish-clothing.csv */,
+				BEDB99E720B9E07C00A6F91B /* german-spanish-countries.csv */,
+				BEDB99E920B9E09200A6F91B /* german-spanish-fruits.csv */,
+				BEDB99EB20B9E0C000A6F91B /* german-spanish-jobs.csv */,
+			);
+			path = Spanish;
+			sourceTree = "<group>";
+		};
+		BEDB99AC20B9920E00A6F91B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE48B1AC20BABB4C00849ABB /* Base */,
+				BE83093820B9876800D0BDB6 /* AppDelegate.swift */,
+				BE83093A20B9876800D0BDB6 /* LanguageSelectionController.swift */,
+				BEDB99B520B9AB3900A6F91B /* NavController.swift */,
+				BEDB99BD20B9B6B400A6F91B /* LanguageController.swift */,
+				BEDB99C320B9C00100A6F91B /* ExerciseController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BEDB99B420B99D1000A6F91B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BEDB99B220B99D0400A6F91B /* Language.swift */,
+				BEDB99BF20B9B88000A6F91B /* Exercise.swift */,
+				BE9BD5A020BD84BD00BCD6B9 /* Word.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BEDB99C820B9C03800A6F91B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BEDB99CB20B9C5D400A6F91B /* Main.storyboard */,
+				BE83094120B9876A00D0BDB6 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +346,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE83094720B9876A00D0BDB6 /* Build configuration list for PBXNativeTarget "vokabeltrainer" */;
 			buildPhases = (
+				72BA1E421D6376C1AEA13CC1 /* [CP] Check Pods Manifest.lock */,
 				BE83093120B9876800D0BDB6 /* Sources */,
 				BE83093220B9876800D0BDB6 /* Frameworks */,
 				BE83093320B9876800D0BDB6 /* Resources */,
+				1B9CCC11A5C34D4B8622BCBF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -104,7 +381,6 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = BE83092C20B9876800D0BDB6;
@@ -122,39 +398,133 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDB99D620B9DF2700A6F91B /* german-spanish-verbs.csv in Resources */,
+				BEDB99D020B9DE8D00A6F91B /* german-spanish-numbers.csv in Resources */,
+				BEDB99E020B9DFF100A6F91B /* german-spanish-animals.csv in Resources */,
+				BEDB99AF20B99A0600A6F91B /* german-spanish-base.csv in Resources */,
+				BEDB99EA20B9E09200A6F91B /* german-spanish-fruits.csv in Resources */,
+				BE9BD5A820BD8DB900BCD6B9 /* exercises.csv in Resources */,
+				BEDB99CC20B9C5D400A6F91B /* Main.storyboard in Resources */,
+				BEDB99E420B9E03400A6F91B /* german-spanish-body.csv in Resources */,
+				BEDB99D420B9DED400A6F91B /* german-spanish-months.csv in Resources */,
 				BE83094320B9876A00D0BDB6 /* LaunchScreen.storyboard in Resources */,
+				BEDB99DC20B9DFB800A6F91B /* german-spanish-paths.csv in Resources */,
+				BEDB99CE20B9DE6500A6F91B /* german-spanish-colors.csv in Resources */,
+				BEDB99E220B9E01200A6F91B /* german-spanish-grocery.csv in Resources */,
+				BEDB99EC20B9E0C000A6F91B /* german-spanish-jobs.csv in Resources */,
+				BEDB99E620B9E05B00A6F91B /* german-spanish-clothing.csv in Resources */,
 				BE83094020B9876A00D0BDB6 /* Assets.xcassets in Resources */,
-				BE83093E20B9876900D0BDB6 /* Main.storyboard in Resources */,
+				BEDB99D820B9DF4A00A6F91B /* german-spanish-adjectives.csv in Resources */,
+				BEDB99D220B9DEAC00A6F91B /* german-spanish-weekdays.csv in Resources */,
+				BEDB99DA20B9DF9A00A6F91B /* german-spanish-economic.csv in Resources */,
+				BE9BD5A620BD8DA600BCD6B9 /* languages.csv in Resources */,
+				BEDB99A520B98EDD00A6F91B /* Fonts in Resources */,
+				BEDB99E820B9E07C00A6F91B /* german-spanish-countries.csv in Resources */,
+				BEDB99DE20B9DFD600A6F91B /* german-spanish-environment.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B9CCC11A5C34D4B8622BCBF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-vokabeltrainer/Pods-vokabeltrainer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftRater/SwiftRater.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRater.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vokabeltrainer/Pods-vokabeltrainer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72BA1E421D6376C1AEA13CC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-vokabeltrainer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BE83093120B9876800D0BDB6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE83093B20B9876900D0BDB6 /* ViewController.swift in Sources */,
+				BEDB998920B98EB700A6F91B /* OptionalExtension.swift in Sources */,
+				BEDB998C20B98EB700A6F91B /* SFSafariViewControllerExtension.swift in Sources */,
+				BEDB999720B98EB700A6F91B /* UIImageExtension.swift in Sources */,
+				BEDB99C220B9BE8400A6F91B /* CardCellBaseCollectionViewController.swift in Sources */,
+				BEDB99C020B9B88000A6F91B /* Exercise.swift in Sources */,
+				BEDB999820B98EB700A6F91B /* ArrayExtension.swift in Sources */,
+				BEDB998B20B98EB700A6F91B /* DateExtension.swift in Sources */,
+				BEDB999B20B98EB700A6F91B /* SwiftRaterExtension.swift in Sources */,
+				BEDB999A20B98EB700A6F91B /* CLLocationExtension.swift in Sources */,
+				BEDB998E20B98EB700A6F91B /* UIColorExtension.swift in Sources */,
+				BEDB999520B98EB700A6F91B /* UIControlExtension.swift in Sources */,
+				BEDB99B620B9AB3900A6F91B /* NavController.swift in Sources */,
+				BEDB999120B98EB700A6F91B /* UINaviationBarExtension.swift in Sources */,
+				BE48B1B420BAD49400849ABB /* Colors.swift in Sources */,
+				BEDB999220B98EB700A6F91B /* UITabBarExtension.swift in Sources */,
+				BEDB99A720B98EF300A6F91B /* Tools.swift in Sources */,
+				BEDB999620B98EB700A6F91B /* MKCoordinateRegionExtension.swift in Sources */,
+				BE83093B20B9876900D0BDB6 /* LanguageSelectionController.swift in Sources */,
+				BEDB999E20B98EB700A6F91B /* RefreshControlExtension.swift in Sources */,
+				BE9BD5A120BD84BD00BCD6B9 /* Word.swift in Sources */,
+				BEDB998F20B98EB700A6F91B /* URLExtension.swift in Sources */,
+				BE48B1B020BABD6300849ABB /* LanguageCardCell.swift in Sources */,
+				BEDB99BE20B9B6B400A6F91B /* LanguageController.swift in Sources */,
+				BEDB999020B98EB700A6F91B /* UIFontExtension.swift in Sources */,
+				BEDB999420B98EB700A6F91B /* IntExtension.swift in Sources */,
+				BEDB998A20B98EB700A6F91B /* CGSizeExtension.swift in Sources */,
+				BE48B1AE20BABCEE00849ABB /* ExerciseCardCell.swift in Sources */,
+				BEDB999F20B98EB700A6F91B /* MapViewExtension.swift in Sources */,
+				BEDB99A220B98ECC00A6F91B /* Config.swift in Sources */,
+				BEDB998D20B98EB700A6F91B /* BadgeExtension.swift in Sources */,
+				BEDB99B320B99D0400A6F91B /* Language.swift in Sources */,
+				BEDB999920B98EB700A6F91B /* EquatableExtension.swift in Sources */,
+				BEDB999D20B98EB700A6F91B /* UIViewExtension.swift in Sources */,
 				BE83093920B9876800D0BDB6 /* AppDelegate.swift in Sources */,
+				BEDB99B120B99A4500A6F91B /* FileManagerExtension.swift in Sources */,
+				BEDB99C420B9C00100A6F91B /* ExerciseController.swift in Sources */,
+				BEDB99A320B98ECC00A6F91B /* Database.swift in Sources */,
+				BEDB999C20B98EB700A6F91B /* UIViewControllerExtension.swift in Sources */,
+				BEDB999320B98EB700A6F91B /* UserDefaultsExtension.swift in Sources */,
+				BEDB99A920B9901300A6F91B /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BE83093C20B9876900D0BDB6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BE83093D20B9876900D0BDB6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BE83094120B9876A00D0BDB6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BE83094220B9876A00D0BDB6 /* Base */,
+				BE83094C20B98C8900D0BDB6 /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,6 +536,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -213,7 +584,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -226,6 +597,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -267,7 +639,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -278,11 +650,13 @@
 		};
 		BE83094820B9876A00D0BDB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DF6912FCC48247307819222 /* Pods-vokabeltrainer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S36925NV4E;
 				INFOPLIST_FILE = vokabeltrainer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,11 +670,13 @@
 		};
 		BE83094920B9876A00D0BDB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 892C3E880DAF4B4DCE4C6D3F /* Pods-vokabeltrainer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S36925NV4E;
 				INFOPLIST_FILE = vokabeltrainer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

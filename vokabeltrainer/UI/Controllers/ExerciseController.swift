@@ -37,13 +37,13 @@ class ExerciseController: UIViewController {
     var state: ExerciseState = .WaitingForSolution
     
     var exercise: Exercise!
-    var content: [[String]]!
+    var content: [Word]!
     var solution: String!
     var word: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        content = exercise.load()
+        content = exercise.load().map {Word($0)}
         prepare()
         loadNewWords()
         titleLabel.textColor = Colors.color(word)
@@ -98,15 +98,20 @@ class ExerciseController: UIViewController {
     
     func loadNewWords() {
         content.shuffle()
-        solution = content[0][0]
+        solution = content[0].original
         let words = content
-            .filter {$0[0] == solution}
-            .map {$0[1]}
+            .filter {$0.original == solution}
+            .map {$0.translation}
         word = words.joined(separator: ", ")
         
-        content = content.filter {$0[0] != solution}
+        let filteredContent = content.filter {$0.original != solution}
         
-        var solutions = [solution, content[0][0], content[1][0], content[2][0]]
+        var solutions = [
+            solution,
+            filteredContent[0].original,
+            filteredContent[1].original,
+            filteredContent[2].original,
+        ]
         
         solutions.shuffle()
         
@@ -115,21 +120,21 @@ class ExerciseController: UIViewController {
         let color = Colors.color(word)
         view.animate(toBackgroundColor: color, withDuration: 0.5)
         
-        UIView.transition(with: titleLabel, duration: 0.5, options: animation, animations: {
+        UIView.transition(with: titleLabel, duration: 0.3, options: animation, animations: {
             self.titleLabel.text = self.word
             self.titleLabel.textColor = color
         }, completion: nil)
-        UIView.transition(with: speechBubble, duration: 0.5, options: animation, animations: nil, completion: nil)
-        UIView.transition(with: button1, duration: 0.5, options: animation, animations: {
+        UIView.transition(with: speechBubble, duration: 0.3, options: animation, animations: nil, completion: nil)
+        UIView.transition(with: button1, duration: 0.3, options: animation, animations: {
             self.button1.setTitle(solutions[0], for: .normal)
         }, completion: nil)
-        UIView.transition(with: button2, duration: 0.5, options: animation, animations: {
+        UIView.transition(with: button2, duration: 0.3, options: animation, animations: {
             self.button2.setTitle(solutions[1], for: .normal)
         }, completion: nil)
-        UIView.transition(with: button3, duration: 0.5, options: animation, animations: {
+        UIView.transition(with: button3, duration: 0.3, options: animation, animations: {
             self.button3.setTitle(solutions[2], for: .normal)
         }, completion: nil)
-        UIView.transition(with: button4, duration: 0.5, options: animation, animations: {
+        UIView.transition(with: button4, duration: 0.3, options: animation, animations: {
             self.button4.setTitle(solutions[3], for: .normal)
         }, completion: nil)
         

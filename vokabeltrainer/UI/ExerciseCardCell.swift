@@ -32,14 +32,14 @@ class ExerciseCardCell: CardCell {
     
     override func prepareButtons() {
         super.prepareButtons()
-        if exercise!.liked {
+        if Bool(exercise!.liked)! {
             favoriteButton.tintColor = CardCell.fullHeartColor
         }
     }
     
     override func favoriteButtonClicked() {
         super.favoriteButtonClicked()
-        print("Favorite \(String(describing: exercise?.name))")
+        exercise!.liked = String(!Bool(exercise!.liked)!)
     }
     
     override func moreButtonClicked() {
