@@ -38,11 +38,12 @@ extension UIView {
         self.addSubview(mainBlurEffectView)
     }
     
-    func animate(toBackgroundColor color: UIColor, withDuration duration: CFTimeInterval) {
+    func animate(toBackgroundColor color: UIColor, withDuration duration: CFTimeInterval, _ closure: @escaping (() -> ())) {
         UIView.animate(withDuration: 1, animations: { () -> Void in
             self.layer.backgroundColor = color.cgColor
         }) { (success) -> Void in
             self.layer.backgroundColor = color.cgColor
+            closure()
         }
     }
     

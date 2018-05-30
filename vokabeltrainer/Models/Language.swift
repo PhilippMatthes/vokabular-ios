@@ -13,6 +13,8 @@ class Language: NSObject, NSCoding {
     var name: String
     var _description: String
     var liked: String {didSet{update()}}
+    var hidden: String {didSet{update()}}
+    var languageCode: String {didSet{update()}}
     
     override var description : String {
         return _description
@@ -23,11 +25,13 @@ class Language: NSObject, NSCoding {
         Database.main.setLanguages(languages!)
     }
     
-    init(id: String, name: String, description: String, liked: String = "false") {
+    init(id: String, name: String, description: String, liked: String = "false", hidden: String = "false", languageCode: String) {
         self.languageId = id
         self.name = name
         self._description = description
         self.liked = liked
+        self.hidden = hidden
+        self.languageCode = languageCode
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -36,11 +40,13 @@ class Language: NSObject, NSCoding {
             let languageId = d.decodeObject(forKey: "language_id") as? String,
             let name = d.decodeObject(forKey: "name") as? String,
             let description = d.decodeObject(forKey: "description") as? String,
-            let liked = d.decodeObject(forKey: "liked") as? String
+            let liked = d.decodeObject(forKey: "liked") as? String,
+            let hidden = d.decodeObject(forKey: "hidden") as? String,
+            let languageCode = d.decodeObject(forKey: "languageCode") as? String
         else {
             return nil
         }
-        self.init(id: languageId, name: name, description: description, liked: liked)
+        self.init(id: languageId, name: name, description: description, liked: liked, hidden: hidden, languageCode: languageCode)
     }
     
     func encode(with aCoder: NSCoder) {
@@ -49,6 +55,8 @@ class Language: NSObject, NSCoding {
         c.encode(name, forKey: "name")
         c.encode(_description, forKey: "description")
         c.encode(liked, forKey: "liked")
+        c.encode(hidden, forKey: "hidden")
+        c.encode(languageCode, forKey: "languageCode")
     }
     
     override public var hashValue: Int {

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Material
+import AVFoundation
 
 enum ExerciseState {
     case WaitingForSolution
@@ -20,6 +21,7 @@ class ExerciseController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var speechBubble: UIImageView!
     
+    @IBOutlet weak var speakButton: IconButton!
     @IBOutlet var button1: RaisedButton!
     @IBOutlet var button2: RaisedButton!
     @IBOutlet var button3: RaisedButton!
@@ -63,6 +65,35 @@ class ExerciseController: UIViewController {
         gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         gestureRecognizer!.cancelsTouchesInView = true
         view.addGestureRecognizer(gestureRecognizer!)
+        
+        if exercise.language()?.languageCode == "none" {
+            speakButton.setImage(Icon.cm.volumeOff, for: .normal)
+            speakButton.setTitle(nil, for: .normal)
+            speakButton.tintColor = Color.grey.base
+            speakButton.isEnabled = false
+            speakButton.layer.cornerRadius = speakButton.frame.width / 2
+            speakButton.backgroundColor = .white
+        } else {
+            speakButton.setImage(Icon.cm.volumeHigh, for: .normal)
+            speakButton.setTitle(nil, for: .normal)
+            speakButton.layer.cornerRadius = speakButton.frame.width / 2
+            speakButton.backgroundColor = .white
+            speakButton.add(for: .touchUpInside) {self.speak()}
+        }
+    }
+    
+    func speak() {
+        guard
+            let textToSpeak = titleLabel.text,
+            let language = exercise.language()
+            else {return}
+        let languageCode = language.languageCode
+        let synthesizer = AVSpeechSynthesizer()
+        let message = AVSpeechUtterance(string: textToSpeak)
+        message.voice = AVSpeechSynthesisVoice(language: languageCode)
+        message.pitchMultiplier = 1.0
+        message.rate = 0.5
+        synthesizer.speak(message)
     }
     
     @objc func handleTap() {
@@ -118,7 +149,7 @@ class ExerciseController: UIViewController {
         let animation = ExerciseController.animations.randomItem()!
         
         let color = Colors.color(word)
-        view.animate(toBackgroundColor: color, withDuration: 0.5)
+        view.animate(toBackgroundColor: color, withDuration: 0.5) {}
         
         UIView.transition(with: titleLabel, duration: 0.3, options: animation, animations: {
             self.titleLabel.text = self.word

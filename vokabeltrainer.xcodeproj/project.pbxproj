@@ -18,6 +18,11 @@
 		BE9BD5A120BD84BD00BCD6B9 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9BD5A020BD84BD00BCD6B9 /* Word.swift */; };
 		BE9BD5A620BD8DA600BCD6B9 /* languages.csv in Resources */ = {isa = PBXBuildFile; fileRef = BE9BD5A520BD8DA600BCD6B9 /* languages.csv */; };
 		BE9BD5A820BD8DB900BCD6B9 /* exercises.csv in Resources */ = {isa = PBXBuildFile; fileRef = BE9BD5A720BD8DB900BCD6B9 /* exercises.csv */; };
+		BEC5F4DC20BE8E3A005E854C /* AppNavigationDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5F4DB20BE8E3A005E854C /* AppNavigationDrawerController.swift */; };
+		BEC5F4DE20BE8F18005E854C /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5F4DD20BE8F18005E854C /* RightViewController.swift */; };
+		BEC5F4E020BED36C005E854C /* HiddenExercisesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5F4DF20BED36C005E854C /* HiddenExercisesController.swift */; };
+		BEC5F4E220BEFEBB005E854C /* CreateNewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5F4E120BEFEBB005E854C /* CreateNewCell.swift */; };
+		BEC5F4E420BF00FC005E854C /* TransparentCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC5F4E320BF00FC005E854C /* TransparentCardCell.swift */; };
 		BEDB998920B98EB700A6F91B /* OptionalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB997220B98EB300A6F91B /* OptionalExtension.swift */; };
 		BEDB998A20B98EB700A6F91B /* CGSizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB997320B98EB300A6F91B /* CGSizeExtension.swift */; };
 		BEDB998B20B98EB700A6F91B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDB997420B98EB400A6F91B /* DateExtension.swift */; };
@@ -92,6 +97,11 @@
 		BE9BD5A020BD84BD00BCD6B9 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		BE9BD5A520BD8DA600BCD6B9 /* languages.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = languages.csv; sourceTree = "<group>"; };
 		BE9BD5A720BD8DB900BCD6B9 /* exercises.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = exercises.csv; sourceTree = "<group>"; };
+		BEC5F4DB20BE8E3A005E854C /* AppNavigationDrawerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationDrawerController.swift; sourceTree = "<group>"; };
+		BEC5F4DD20BE8F18005E854C /* RightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
+		BEC5F4DF20BED36C005E854C /* HiddenExercisesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenExercisesController.swift; sourceTree = "<group>"; };
+		BEC5F4E120BEFEBB005E854C /* CreateNewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewCell.swift; sourceTree = "<group>"; };
+		BEC5F4E320BF00FC005E854C /* TransparentCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentCardCell.swift; sourceTree = "<group>"; };
 		BEDB997220B98EB300A6F91B /* OptionalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtension.swift; sourceTree = "<group>"; };
 		BEDB997320B98EB300A6F91B /* CGSizeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeExtension.swift; sourceTree = "<group>"; };
 		BEDB997420B98EB400A6F91B /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -231,6 +241,26 @@
 			path = vokabeltrainer;
 			sourceTree = "<group>";
 		};
+		BEC5F4E520BF1A78005E854C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BEC5F4E620BF1A84005E854C /* Base */,
+				BE48B1AD20BABCEE00849ABB /* ExerciseCardCell.swift */,
+				BE48B1AF20BABD6300849ABB /* LanguageCardCell.swift */,
+				BEC5F4E120BEFEBB005E854C /* CreateNewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BEC5F4E620BF1A84005E854C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BEDB99A820B9901300A6F91B /* CardCell.swift */,
+				BEC5F4E320BF00FC005E854C /* TransparentCardCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		BEDB997020B98E8800A6F91B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,9 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				BEDB99AC20B9920E00A6F91B /* Controllers */,
-				BEDB99A820B9901300A6F91B /* CardCell.swift */,
-				BE48B1AD20BABCEE00849ABB /* ExerciseCardCell.swift */,
-				BE48B1AF20BABD6300849ABB /* LanguageCardCell.swift */,
+				BEC5F4E520BF1A78005E854C /* Cells */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -316,6 +344,9 @@
 				BEDB99B520B9AB3900A6F91B /* NavController.swift */,
 				BEDB99BD20B9B6B400A6F91B /* LanguageController.swift */,
 				BEDB99C320B9C00100A6F91B /* ExerciseController.swift */,
+				BEC5F4DB20BE8E3A005E854C /* AppNavigationDrawerController.swift */,
+				BEC5F4DD20BE8F18005E854C /* RightViewController.swift */,
+				BEC5F4DF20BED36C005E854C /* HiddenExercisesController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -480,6 +511,7 @@
 				BEDB99C220B9BE8400A6F91B /* CardCellBaseCollectionViewController.swift in Sources */,
 				BEDB99C020B9B88000A6F91B /* Exercise.swift in Sources */,
 				BEDB999820B98EB700A6F91B /* ArrayExtension.swift in Sources */,
+				BEC5F4E420BF00FC005E854C /* TransparentCardCell.swift in Sources */,
 				BEDB998B20B98EB700A6F91B /* DateExtension.swift in Sources */,
 				BEDB999B20B98EB700A6F91B /* SwiftRaterExtension.swift in Sources */,
 				BEDB999A20B98EB700A6F91B /* CLLocationExtension.swift in Sources */,
@@ -503,6 +535,7 @@
 				BE48B1AE20BABCEE00849ABB /* ExerciseCardCell.swift in Sources */,
 				BEDB999F20B98EB700A6F91B /* MapViewExtension.swift in Sources */,
 				BEDB99A220B98ECC00A6F91B /* Config.swift in Sources */,
+				BEC5F4DE20BE8F18005E854C /* RightViewController.swift in Sources */,
 				BEDB998D20B98EB700A6F91B /* BadgeExtension.swift in Sources */,
 				BEDB99B320B99D0400A6F91B /* Language.swift in Sources */,
 				BEDB999920B98EB700A6F91B /* EquatableExtension.swift in Sources */,
@@ -512,8 +545,11 @@
 				BEDB99C420B9C00100A6F91B /* ExerciseController.swift in Sources */,
 				BEDB99A320B98ECC00A6F91B /* Database.swift in Sources */,
 				BEDB999C20B98EB700A6F91B /* UIViewControllerExtension.swift in Sources */,
+				BEC5F4DC20BE8E3A005E854C /* AppNavigationDrawerController.swift in Sources */,
+				BEC5F4E220BEFEBB005E854C /* CreateNewCell.swift in Sources */,
 				BEDB999320B98EB700A6F91B /* UserDefaultsExtension.swift in Sources */,
 				BEDB99A920B9901300A6F91B /* CardCell.swift in Sources */,
+				BEC5F4E020BED36C005E854C /* HiddenExercisesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

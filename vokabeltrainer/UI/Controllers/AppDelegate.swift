@@ -21,7 +21,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SwiftRater.setUpFor(Config.debugSwiftRater ? .testing : .distributing)
         
         window = UIWindow(frame: Screen.bounds)
-        window!.rootViewController = NavController(rootViewController: LanguageSelectionController())
+        let languageSelectionController = LanguageSelectionController()
+        languageSelectionController.hidden = false
+        let navController = NavController(rootViewController: languageSelectionController)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "RightViewController") as! RightViewController
+        let rightViewController = vc
+        let rootController = AppNavigationDrawerController(
+            rootViewController: navController,
+            rightViewController: rightViewController)
+        rootController.isLeftPanGestureEnabled = false
+        rootController.isRightPanGestureEnabled = false
+        window!.rootViewController = rootController
         window!.makeKeyAndVisible()
         
         return true

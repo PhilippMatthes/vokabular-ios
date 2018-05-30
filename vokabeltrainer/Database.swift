@@ -24,6 +24,14 @@ class Database {
         }
     }
     
+    static func newLanguageId() -> Int {
+        return main.languages.map {Int($0.languageId)!} .max()! + 1
+    }
+    
+    static func newExerciseId() -> Int {
+        return main.exercises.map {Int($0.id)!} .max()! + 1
+    }
+    
     private init() {
         NSKeyedUnarchiver.setClass(Language.self, forClassName: "Language")
         if let languages = UserDefaults.loadObject(ofType: [Language](), withIdentifier: "languages") {
@@ -32,8 +40,8 @@ class Database {
             guard let languagescsv = Database.readDataFromCSV(fileName: "languages", fileType: "csv") else {return}
             setLanguages(
                 Database.csv(data: languagescsv)
-                .filter {$0.count == 3}
-                .map {Language(id: $0[0], name: $0[1], description: $0[2])}
+                .filter {$0.count == 4}
+                    .map {Language(id: $0[0], name: $0[1], description: $0[2], languageCode: $0[3])}
             )
         }
         NSKeyedUnarchiver.setClass(Exercise.self, forClassName: "Exercise")

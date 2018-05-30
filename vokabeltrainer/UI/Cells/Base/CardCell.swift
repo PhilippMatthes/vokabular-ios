@@ -11,7 +11,12 @@ import Material
 import Motion
 import UIKit
 
-class CardCell: CardCollectionViewCell {
+protocol CardCellDelegate {
+    func cardCellDidSelectLike()
+    func cardCellDidSelectHide()
+}
+
+class CardCell: TransparentCardCell {
     
     static let height: CGFloat = 250
     
@@ -19,29 +24,22 @@ class CardCell: CardCollectionViewCell {
     static let emptyHeartColor: UIColor = Color.grey.base
     
     var toolbar: Toolbar!
-    var moreButton: IconButton!
+    var hideButton: IconButton!
     var bottomBar: Bar!
     var favoriteButton: IconButton!
     var lowerLabel: UILabel!
     var contentLabel: UILabel!
     
-    func prep() {
+    var delegate: CardCellDelegate?
+    
+    func prep(hidden: Bool) {
         prepareColor()
         prepareLowerLabel()
-        prepareButtons()
+        prepareButtons(hidden: hidden)
         prepareToolBar()
         prepareContentView()
         prepareBottomBar()
         prepareCard()
-    }
-    
-    func prepareColor() {
-        tintColor = .clear
-        backgroundColor = .clear
-        pulseColor = .clear
-        shadowColor = .clear
-        borderColor = .clear
-        dividerColor = .clear
     }
     
     func prepareLowerLabel() {
@@ -51,20 +49,20 @@ class CardCell: CardCollectionViewCell {
         lowerLabel.text = "Lower Label Text"
     }
     
-    func prepareButtons() {
+    func prepareButtons(hidden: Bool) {
         favoriteButton = IconButton(image: Icon.favorite, tintColor: CardCell.emptyHeartColor)
         favoriteButton.add(for: .touchUpInside) {
             self.favoriteButtonClicked()
         }
         
-        moreButton = IconButton(image: Icon.cm.moreVertical, tintColor: Color.white)
-        moreButton.add(for: .touchUpInside) {
-            self.moreButtonClicked()
+        hideButton = IconButton(image: hidden ? Icon.cm.check : Icon.cm.close, tintColor: Color.white)
+        hideButton.add(for: .touchUpInside) {
+            self.hideButtonClicked()
         }
     }
     
     func prepareToolBar() {
-        toolbar = Toolbar(rightViews: [moreButton])
+        toolbar = Toolbar(rightViews: [hideButton])
         toolbar.title = "Toolbar Title"
         toolbar.titleLabel.textColor = Color.white
         toolbar.titleLabel.textAlignment = .left
@@ -101,17 +99,23 @@ class CardCell: CardCollectionViewCell {
         
         card!.frame = CGRect(center: bounds.center, size: CGSize(width: bounds.size.width - 20, height: CardCell.height))
         
-        card!.backgroundColor = Color.white.withAlphaComponent(0.2)
-        card!.animate(toBackgroundColor: Color.white, withDuration: 1.0)
+        card!.backgroundColor = Color.white
         card!.bottomBar!.backgroundColor = .clear
     }
     
     func favoriteButtonClicked() {
+        performFavoriteAction()
         favoriteButton.tintColor = favoriteButton.tintColor == CardCell.fullHeartColor ? CardCell.emptyHeartColor : CardCell.fullHeartColor
+        delegate?.cardCellDidSelectLike()
     }
     
-    func moreButtonClicked() {
-        
+    func performFavoriteAction() {}
+    
+    func hideButtonClicked() {
+        performHideAction()
+        delegate?.cardCellDidSelectHide()
     }
+    
+    func performHideAction() {}
     
 }

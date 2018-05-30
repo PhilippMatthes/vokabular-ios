@@ -15,7 +15,7 @@ class LanguageCardCell: CardCell {
     
     func prepare(forLanguage language: Language) {
         self.language = language
-        prep()
+        prep(hidden: Bool(language.hidden)!)
         let count = language.exercises().count
         lowerLabel.text = count == 1 ? "1 Übung" : "\(count) Übungen"
         lowerLabel.textAlignment = .right
@@ -26,24 +26,23 @@ class LanguageCardCell: CardCell {
     
     override func prepareToolBar() {
         super.prepareToolBar()
-        toolbar.backgroundColor = Config.bgcolor
-        toolbar.animate(toBackgroundColor: Colors.color(language!.name), withDuration: 2.0)
+        toolbar.backgroundColor = Colors.color(language!.name)
     }
     
-    override func prepareButtons() {
-        super.prepareButtons()
+    override func prepareButtons(hidden: Bool) {
+        super.prepareButtons(hidden: hidden)
         if Bool(language!.liked)! {
             favoriteButton.tintColor = CardCell.fullHeartColor
         }
     }
     
-    override func favoriteButtonClicked() {
-        super.favoriteButtonClicked()
+    override func performFavoriteAction() {
+        super.performFavoriteAction()
         language!.liked = String(!(Bool(language!.liked)!))
     }
     
-    override func moreButtonClicked() {
-        super.moreButtonClicked()
-        print("More \(String(describing: language?.name))")
+    override func performHideAction() {
+        super.performHideAction()
+        language!.hidden = String(!Bool(language!.hidden)!)
     }
 }

@@ -11,6 +11,8 @@ import Material
 
 class CardCellBaseCollectionViewController: CardCollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    var wasPopped: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dividerColor = .clear
@@ -31,8 +33,9 @@ class CardCellBaseCollectionViewController: CardCollectionViewController, UIColl
         navigationItem.titleLabel.text = title
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Screen.width, height: CardCell.height)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        wasPopped = true
     }
     
 }

@@ -15,7 +15,7 @@ class ExerciseCardCell: CardCell {
     
     func prepare(forExercise exercise: Exercise) {
         self.exercise = exercise
-        prep()
+        prep(hidden: Bool(exercise.hidden)!)
         let amount = exercise.load().count
         lowerLabel.text = amount == 1 ? "1 Begriff" : "\(amount) Begriffe"
         lowerLabel.textAlignment = .right
@@ -26,24 +26,23 @@ class ExerciseCardCell: CardCell {
     
     override func prepareToolBar() {
         super.prepareToolBar()
-        toolbar.backgroundColor = Config.darkbgcolor
-        toolbar.animate(toBackgroundColor: Colors.color(exercise!.name), withDuration: 2.0)
+        toolbar.backgroundColor = Colors.color(exercise!.name)
     }
     
-    override func prepareButtons() {
-        super.prepareButtons()
+    override func prepareButtons(hidden: Bool) {
+        super.prepareButtons(hidden: hidden)
         if Bool(exercise!.liked)! {
             favoriteButton.tintColor = CardCell.fullHeartColor
         }
     }
     
-    override func favoriteButtonClicked() {
-        super.favoriteButtonClicked()
+    override func performFavoriteAction() {
+        super.performFavoriteAction()
         exercise!.liked = String(!Bool(exercise!.liked)!)
     }
     
-    override func moreButtonClicked() {
-        super.moreButtonClicked()
-        print("More \(String(describing: exercise?.name))")
+    override func performHideAction() {
+        super.performHideAction()
+        exercise!.hidden = String(!Bool(exercise!.hidden)!)
     }
 }

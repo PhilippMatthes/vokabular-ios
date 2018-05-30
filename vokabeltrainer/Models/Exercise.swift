@@ -16,6 +16,7 @@ class Exercise: NSObject, NSCoding {
     var _description: String
     var liked: String {didSet{update()}}
     var highscore: String {didSet{update()}}
+    var hidden: String {didSet{update()}}
     
     override var description : String {
         return _description
@@ -26,7 +27,7 @@ class Exercise: NSObject, NSCoding {
         Database.main.setExercises(exercises!)
     }
     
-    init(languageId: String, id: String, name: String, csvfile: String, description: String, liked: String = "false", highscore: String = "0") {
+    init(languageId: String, id: String, name: String, csvfile: String, description: String, liked: String = "false", highscore: String = "0", hidden: String = "false") {
         self.languageId = languageId
         self.id = id
         self.name = name
@@ -34,6 +35,7 @@ class Exercise: NSObject, NSCoding {
         self._description = description
         self.liked = liked
         self.highscore = highscore
+        self.hidden = hidden
     }
     
     func load() -> [[String]] {
@@ -50,11 +52,12 @@ class Exercise: NSObject, NSCoding {
             let csvfile = d.decodeObject(forKey: "csvfile") as? String,
             let description = d.decodeObject(forKey: "description") as? String,
             let liked = d.decodeObject(forKey: "liked") as? String,
-            let highscore = d.decodeObject(forKey: "highscore") as? String
+            let highscore = d.decodeObject(forKey: "highscore") as? String,
+            let hidden = d.decodeObject(forKey: "hidden") as? String
             else {
                 return nil
         }
-        self.init(languageId: languageId, id: id, name: name, csvfile: csvfile, description: description, liked: liked, highscore: highscore)
+        self.init(languageId: languageId, id: id, name: name, csvfile: csvfile, description: description, liked: liked, highscore: highscore, hidden: hidden)
     }
     
     func encode(with aCoder: NSCoder) {
@@ -66,6 +69,7 @@ class Exercise: NSObject, NSCoding {
         c.encode(_description, forKey: "description")
         c.encode(liked, forKey: "liked")
         c.encode(highscore, forKey: "highscore")
+        c.encode(hidden, forKey: "hidden")
     }
     
     override public var hashValue: Int {
@@ -74,6 +78,15 @@ class Exercise: NSObject, NSCoding {
     
     static func ==(lhs: Exercise, rhs: Exercise) -> Bool {
         return lhs.id == rhs.id && lhs.languageId == rhs.languageId
+    }
+    
+    func language() -> Language? {
+        for language in Database.main.languages {
+            if language.languageId == self.languageId {
+                return language
+            }
+        }
+        return nil
     }
 
 }

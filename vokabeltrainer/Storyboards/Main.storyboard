@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController storyboardIdentifier="ExerciseController" id="EP0-9Y-WmN" customClass="ExerciseController" customModule="vokabeltrainer" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lrh-tV-hTd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pf8-Rb-65T" customClass="RaisedButton" customModule="Material">
-                                <rect key="frame" x="10" y="318" width="300" height="50"/>
+                                <rect key="frame" x="10" y="230" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ds1-ql-lKw"/>
                                 </constraints>
@@ -27,7 +27,7 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9h-H5-mLk" customClass="RaisedButton" customModule="Material">
-                                <rect key="frame" x="10" y="378" width="300" height="50"/>
+                                <rect key="frame" x="10" y="290" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="t0E-xl-n2Q"/>
                                 </constraints>
@@ -35,7 +35,7 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyn-4p-6pW" customClass="RaisedButton" customModule="Material">
-                                <rect key="frame" x="10" y="438" width="300" height="50"/>
+                                <rect key="frame" x="10" y="350" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="qKa-gb-yCu"/>
                                 </constraints>
@@ -43,7 +43,7 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLC-Fz-2Xr" customClass="RaisedButton" customModule="Material">
-                                <rect key="frame" x="10" y="498" width="300" height="50"/>
+                                <rect key="frame" x="10" y="410" width="300" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="wtS-ic-RvR"/>
                                 </constraints>
@@ -51,13 +51,13 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMC-72-mPd">
-                                <rect key="frame" x="10" y="28" width="300" height="282"/>
+                                <rect key="frame" x="10" y="28" width="300" height="194"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speech-bubble" translatesAutoresizingMaskIntoConstraints="NO" id="Iuw-aL-Rby">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="282"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="194"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIo-oN-IbO">
-                                        <rect key="frame" x="75" y="41" width="150" height="200"/>
+                                        <rect key="frame" x="75" y="-3" width="150" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="Cqb-lB-Qwm"/>
                                             <constraint firstAttribute="height" constant="200" id="YQD-kn-27P"/>
@@ -66,6 +66,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6e-0W-dHa" customClass="IconButton" customModule="Material">
+                                        <rect key="frame" x="242" y="136" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Dml-bM-AB0"/>
+                                            <constraint firstAttribute="width" constant="50" id="yzI-bb-QCG"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -73,6 +81,8 @@
                                     <constraint firstItem="eIo-oN-IbO" firstAttribute="centerX" secondItem="SMC-72-mPd" secondAttribute="centerX" id="ErH-ar-UbY"/>
                                     <constraint firstAttribute="trailing" secondItem="Iuw-aL-Rby" secondAttribute="trailing" id="dkN-VY-nX5"/>
                                     <constraint firstItem="eIo-oN-IbO" firstAttribute="centerY" secondItem="SMC-72-mPd" secondAttribute="centerY" id="duD-V5-A2v"/>
+                                    <constraint firstAttribute="trailing" secondItem="p6e-0W-dHa" secondAttribute="trailing" constant="8" id="irr-YI-BzK"/>
+                                    <constraint firstAttribute="bottom" secondItem="p6e-0W-dHa" secondAttribute="bottom" constant="8" id="v4r-9V-ofN"/>
                                     <constraint firstItem="Iuw-aL-Rby" firstAttribute="top" secondItem="SMC-72-mPd" secondAttribute="top" id="vb2-Eg-X63"/>
                                     <constraint firstItem="Iuw-aL-Rby" firstAttribute="leading" secondItem="SMC-72-mPd" secondAttribute="leading" id="xxu-pG-hcW"/>
                                 </constraints>
@@ -104,16 +114,84 @@
                         <outlet property="button2" destination="r9h-H5-mLk" id="NY8-Fz-mP3"/>
                         <outlet property="button3" destination="Kyn-4p-6pW" id="9mr-eQ-fcl"/>
                         <outlet property="button4" destination="kLC-Fz-2Xr" id="8JY-Kf-mgY"/>
+                        <outlet property="speakButton" destination="p6e-0W-dHa" id="BdH-Ns-sKa"/>
                         <outlet property="speechBubble" destination="Iuw-aL-Rby" id="apx-9s-tpT"/>
                         <outlet property="titleLabel" destination="eIo-oN-IbO" id="nfS-jh-bIO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTV-s2-Yef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120.8" y="142.57871064467767"/>
+            <point key="canvasLocation" x="120" y="142.5"/>
+        </scene>
+        <!--Right View Controller-->
+        <scene sceneID="tTy-Az-GzP">
+            <objects>
+                <viewController restorationIdentifier="RightViewController" storyboardIdentifier="RightViewController" id="vIF-sP-Q8m" customClass="RightViewController" customModule="vokabeltrainer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J8P-SQ-vam">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_lila" translatesAutoresizingMaskIntoConstraints="NO" id="RGi-UD-qJu">
+                                <rect key="frame" x="110.5" y="40" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="EbO-sV-XQU"/>
+                                    <constraint firstAttribute="height" constant="100" id="Hgw-Be-aqO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efN-0C-gUr">
+                                <rect key="frame" x="10" y="160" width="300" height="142.5"/>
+                                <string key="text">Vokabular hilft dir dabei, deine Vokabeln zu lernen. 
+
+Hast du Fragen oder Verbesserungsvorschläge? Kontaktiere uns einfach unter vokabular@philippmatth.es!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsc-dh-ZJO" customClass="FlatButton" customModule="Material">
+                                <rect key="frame" x="10" y="410" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8Ab-h9-z8M"/>
+                                </constraints>
+                                <state key="normal" title="Verborgene Sprachen"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P61-ZA-atH" customClass="FlatButton" customModule="Material">
+                                <rect key="frame" x="10" y="350" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dWr-BE-ejD"/>
+                                </constraints>
+                                <state key="normal" title="Verborgene Übungen"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nqY-kf-kvF" firstAttribute="trailing" secondItem="efN-0C-gUr" secondAttribute="trailing" constant="10" id="FPv-Ig-tt7"/>
+                            <constraint firstItem="nqY-kf-kvF" firstAttribute="trailing" secondItem="P61-ZA-atH" secondAttribute="trailing" constant="10" id="FWl-5h-eNv"/>
+                            <constraint firstItem="P61-ZA-atH" firstAttribute="leading" secondItem="nqY-kf-kvF" secondAttribute="leading" constant="10" id="URk-rA-XB1"/>
+                            <constraint firstItem="jsc-dh-ZJO" firstAttribute="top" secondItem="P61-ZA-atH" secondAttribute="bottom" constant="10" id="XcM-zs-b5U"/>
+                            <constraint firstItem="jsc-dh-ZJO" firstAttribute="leading" secondItem="nqY-kf-kvF" secondAttribute="leading" constant="10" id="Xrw-7O-Gbf"/>
+                            <constraint firstItem="nqY-kf-kvF" firstAttribute="bottom" secondItem="jsc-dh-ZJO" secondAttribute="bottom" constant="20" id="cN8-7Q-B9v"/>
+                            <constraint firstItem="RGi-UD-qJu" firstAttribute="centerX" secondItem="J8P-SQ-vam" secondAttribute="centerX" id="kUo-gJ-sk4"/>
+                            <constraint firstItem="nqY-kf-kvF" firstAttribute="trailing" secondItem="jsc-dh-ZJO" secondAttribute="trailing" constant="10" id="laK-m0-SQj"/>
+                            <constraint firstItem="RGi-UD-qJu" firstAttribute="top" secondItem="nqY-kf-kvF" secondAttribute="top" constant="20" id="s4m-uT-kjk"/>
+                            <constraint firstItem="efN-0C-gUr" firstAttribute="leading" secondItem="nqY-kf-kvF" secondAttribute="leading" constant="10" id="ugy-BU-BsV"/>
+                            <constraint firstItem="efN-0C-gUr" firstAttribute="top" secondItem="RGi-UD-qJu" secondAttribute="bottom" constant="20" id="xPl-WB-K9p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nqY-kf-kvF"/>
+                    </view>
+                    <connections>
+                        <outlet property="hiddenExercisesButton" destination="P61-ZA-atH" id="KIP-oa-cmV"/>
+                        <outlet property="hiddenLanguagesButton" destination="jsc-dh-ZJO" id="Khv-fG-bIe"/>
+                        <outlet property="image" destination="RGi-UD-qJu" id="mkb-D7-cAN"/>
+                        <outlet property="informationLabel" destination="efN-0C-gUr" id="m2y-Ix-Pgc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WIb-kK-sgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008.75" y="141.5492957746479"/>
         </scene>
     </scenes>
     <resources>
+        <image name="logo_lila" width="2048" height="2048"/>
         <image name="speech-bubble" width="2048" height="2048"/>
     </resources>
 </document>
